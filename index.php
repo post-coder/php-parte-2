@@ -22,15 +22,38 @@
 
         <hr>
 
+        <?php
 
+        // inizializziamo un array vuoto, inseriamo elementi sinchè non ne abbiamo 10
+
+        $numeri = [];
+
+        while (count($numeri) < 10) {
+            // codice per aggiungere un elemento
+
+            // per generare un numero casuale e inserirlo nell'array
+            $numeri[] = rand(1, 10);
+        }
+
+        var_dump($numeri);
+
+        ?>
+        <hr>
         <ul>
 
-            <?php
+            <!-- per stampare elementi in pagina da un array? -->
 
-            for ($i = 0; $i < 10; $i++) {
-                echo "<li>Elemento $i </li>";
+            <?php 
+
+            // for($i = 0; $i < count($numeri); $i++) {
+            //     echo "<li> $numeri[$i] </li>";
+            // }
+
+            // posso utilizzare il foreach
+            foreach ($numeri as $currentNumber) {
+                echo "<li> $currentNumber </li>";
             }
-            
+
             ?>
 
         </ul>
