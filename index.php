@@ -16,29 +16,17 @@
 
         <?php 
 
-        $numero_utente = 47;
+        $numero_utente = 67;
 
-
-        $numero_vincente = 50;
-
-        $numero_jolly = 47;
 
 
         // se il numero utente è uguale al numero vincente, stampare a schermo un messaggio
 
-        if ($numero_utente == $numero_vincente) {
+        if ($numero_utente >= 50 && $numero_utente < 70) {
             // insieme di istruzioni da eseguire in caso la condizione sia vera
-            echo "Hai vinto!";
+            echo "Il numero è maggiore o uguale a 50 e minore di 70";
         
-        } else if ($numero_utente == $numero_jolly) {
-
-            echo "Hai indovinato il numero jolly!";
-
-        } else {
-
-            echo "Non hai vinto...";
-
-        }
+        } 
 
 
         ?>
