@@ -58,7 +58,7 @@
                         foreach($currentStudente as $key => $value) {
                             echo "
                             <li>
-                                $key : " . $value .  "
+                                $key:  $value
                             </li>";
                         }
                         echo "
