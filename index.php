@@ -13,45 +13,60 @@
     
     <div class="container py-5">
         <h1>PHP Parte 2</h1>
+        <hr>
 
         <?php 
+        $studenti = [
+            [
+                "nome" => "Gabriel",
+                "cognome" => "Spanu",
+                "classe" => 118,
+                "media_voti" => 7,
+            ],
+            [
+                "nome" => "Alberto",
+                "cognome" => "Arrighetti",
+                "classe" => 118
+            ],
+            [
+                "nome" => "Topolino",
+                "cognome" => "Mouse",
+                "classe" => 118
+            ]
+        ];  
 
 
         
         ?>
 
+
         <hr>
-
-        <?php
-
-        // inizializziamo un array vuoto, inseriamo elementi sinchè non ne abbiamo 10
-
-        $numeri = [];
-
-        while (count($numeri) < 10) {
-            // codice per aggiungere un elemento
-
-            // per generare un numero casuale e inserirlo nell'array
-            $numeri[] = rand(1, 10);
-        }
-
-        var_dump($numeri);
-
-        ?>
-        <hr>
+        
         <ul>
 
-            <!-- per stampare elementi in pagina da un array? -->
+            <?php
+            
+            foreach($studenti as $currentStudente) {
+                echo "
+                <li>
+                    <ul>
+                        ";
+                        // questa sintassi ci restituisce non solo il valore singolo di ogni elemento
+                        // ma anche la chiave di ogni elemento (se presente)
+                        // se stiamo lavorando con un array quel $key sarà l'indice
+                        // se stiamo lavorando con un oggetto, quel $key sarà la chiave
+                        foreach($currentStudente as $key => $value) {
+                            echo "
+                            <li>
+                                $key : " . $value .  "
+                            </li>";
+                        }
+                        echo "
+                    </ul>
+                    
+                </li>
+                ";
 
-            <?php 
-
-            // for($i = 0; $i < count($numeri); $i++) {
-            //     echo "<li> $numeri[$i] </li>";
-            // }
-
-            // posso utilizzare il foreach
-            foreach ($numeri as $currentNumber) {
-                echo "<li> $currentNumber </li>";
             }
 
             ?>
