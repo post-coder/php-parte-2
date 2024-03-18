@@ -55,6 +55,15 @@
             ]
         ];  
 
+
+        // per aggiungere un elemento al nostro array la sintassi è uguale a JS
+        
+        $classe[] = [
+            "nome" => "Topolino",
+            "cognome" => "De Paperoni",
+            "classe" => 118
+        ];
+
         var_dump($classe);
 
         ?>
