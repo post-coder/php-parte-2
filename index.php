@@ -16,24 +16,11 @@
 
         <?php 
 
-        $numero_utente = 67;
+        $prima_parte = "Ciao a ";
+        $seconda_parte = "tutti";
 
-
-
-        // come in JS, php ha due operatori di uguaglianza:
-        // == -> controlla se il valore CONVERTITO sia uguale (3 == "3") questo ci da true
-        // === -> controlla se il valore E IL SUO TIPO siano uguali (3 == "3") questo ci da false
-        if (3 === "3") {
-            
-            echo "true";
-        
-        } else {
-
-            echo "false";
-
-        }
-
-
+        // per concatenare delle stringhe DOBBIAMO utilizzare l'operatore "."
+        echo $prima_parte . $seconda_parte;
         ?>
     </div>
 
