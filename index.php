@@ -20,13 +20,18 @@
 
 
 
-        // se il numero utente è uguale al numero vincente, stampare a schermo un messaggio
-
-        if ($numero_utente >= 50 && $numero_utente < 70) {
-            // insieme di istruzioni da eseguire in caso la condizione sia vera
-            echo "Il numero è maggiore o uguale a 50 e minore di 70";
+        // come in JS, php ha due operatori di uguaglianza:
+        // == -> controlla se il valore CONVERTITO sia uguale (3 == "3") questo ci da true
+        // === -> controlla se il valore E IL SUO TIPO siano uguali (3 == "3") questo ci da false
+        if (3 === "3") {
+            
+            echo "true";
         
-        } 
+        } else {
+
+            echo "false";
+
+        }
 
 
         ?>
